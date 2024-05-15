@@ -9,7 +9,7 @@ data = pd.read_csv("rainfall in india 1901-2015.csv")
 data = data.fillna(data.mean())
 
 group = data.groupby('SUBDIVISION')['YEAR','JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC']
-data=group.get_group(('TAMIL NADU'))
+data=group.get_group(('TELANGANA'))
 # data.head()
 
 df=data.melt(['YEAR']).reset_index()
